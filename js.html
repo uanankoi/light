@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            display: block;
+            width: 20vw;
+            height: 20vh;
+            padding: 10px 20px;
+            background-color: rgb(221, 119, 119);
+            margin: 40vh 40vw;
+            text-decoration: none;
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            color: aqua;
+        }
+        .active{
+            line-height: 20vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="####" class="active">light</a>
+
+
+    <script>
+        let switchBtn = document.querySelector('a'),
+            back = document.querySelector('body'),
+            onOff = true;
+
+        switchBtn.addEventListener('click',function(e){
+            onOff = !onOff;
+            this.classList.toggle('active')
+            back.style.backgroundColor= ( onOff ? 'yellow' : 'black');
+        })    
+    </script>
+    
+</body>
+</html>
